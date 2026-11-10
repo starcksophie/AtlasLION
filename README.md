@@ -22,13 +22,6 @@ src/
 
 Script names: `gen_*` computes results, `viz_*` draws figures from results that already exist. Scripts without a prefix are processing steps or shared code.
 
-## Installation
-
-```bash
-git clone https://github.com/<user>/<repo>.git && cd <repo>
-pip install -r requirements.txt
-```
-
 ## Usage
 
 The analysis covers the 280 scans listed in `available_data_280.csv` (see `group_subjects` in `src/lion_utils.py`). Scripts write to `results/`. Run them from their own folder, in this order:
@@ -68,20 +61,6 @@ python demographics/gen_demographics_overview.py && python demographics/gen_tabl
 
 # src/viz/: every viz_* script (viz_vessel_conspicuity.py with --cnr), then
 python viz_export_tiff.py
-```
-
-## Results
-
-```
-results/
-  atlases/                   atlases, Couinaud labels
-  atlases_aligned/           affine alignment, atlas overview figure
-  atlas_deformable_aligned/  deformable alignment, atlas change maps
-  features/                  per-subject, per-segment features
-  correlation/               longitudinal and cross-sectional correlations
-  couinaud/                  segment analysis
-  stats/                     demographics, registration metrics
-  figures/                   figures, tif_600dpi/ for all figures at 600 DPI
 ```
 
 ## Data
